@@ -1,18 +1,16 @@
-package com.example.practice_bootstrap;
+package com.example.practice_bootstrap.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
-public class controler {
+@org.springframework.stereotype.Controller
+public class Controller {
     //autowire to the repository
 
 
 
 
-    @GetMapping("")
+    @GetMapping("/")
     public String index(Model model) {
 
 
