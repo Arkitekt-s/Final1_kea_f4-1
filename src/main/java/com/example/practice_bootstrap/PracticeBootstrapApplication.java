@@ -10,6 +10,4 @@ public class PracticeBootstrapApplication {
         SpringApplication.run(PracticeBootstrapApplication.class, args);
     }
 
-
-
 }
