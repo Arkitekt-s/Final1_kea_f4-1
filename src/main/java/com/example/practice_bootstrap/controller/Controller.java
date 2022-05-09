@@ -16,11 +16,11 @@ public class Controller {
     }
     //creat new page for the table
 
-    @GetMapping("/table1")
+    @GetMapping("/cars")
     public String table1() {
         return "tables-data";
     }
-    @GetMapping("/table2")
+    @GetMapping("/customers")
     public String table2() {
         return "tables-general";
     }
