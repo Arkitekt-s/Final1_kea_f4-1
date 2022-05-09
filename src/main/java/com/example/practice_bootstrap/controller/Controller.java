@@ -12,10 +12,22 @@ public class Controller {
 
     @GetMapping("/")
     public String index(Model model) {
-
-
-
         return "index";
     }
+    //creat new page for the table
+
+    @GetMapping("/table1")
+    public String table1() {
+        return "tables-data";
+    }
+    @GetMapping("/table2")
+    public String table2() {
+        return "tables-general";
+    }
+    @GetMapping("/register")
+    public String register() {
+        return "pages-register";
+    }
+
 }
 
