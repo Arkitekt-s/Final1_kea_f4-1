@@ -4,6 +4,7 @@ import com.example.practice_bootstrap.model.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,9 +15,8 @@ public class VehicleDAO {
     JdbcTemplate jdbcTemplate;
 
     public List<Vehicle> getVehicles() {
-        return jdbcTemplate.query(
-                "SELECT * FROM nordic_motorhome.vehicles",
-                new BeanPropertyRowMapper<>(Vehicle.class)
-        );
+        String sql = "SELECT * FROM nordic_motorhome.vehicles";
+        RowMapper<Vehicle> rowMapper = new BeanPropertyRowMapper<>(Vehicle.class);
+        return jdbcTemplate.query(sql, rowMapper);
     }
 }
