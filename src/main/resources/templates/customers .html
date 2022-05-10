@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="utf-8">
@@ -357,50 +357,27 @@
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Start Date</th>
-                  </tr>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Date of Birth</th>
+                  <th>Licence Number</th>
+                  <th>Licence Type</th>
+                  <th>Phone</th>
+                </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Brandon Jacob</td>
-                    <td>Designer</td>
-                    <td>28</td>
-                    <td>2016-05-25</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Bridie Kessler</td>
-                    <td>Developer</td>
-                    <td>35</td>
-                    <td>2014-12-05</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Ashleigh Langosh</td>
-                    <td>Finance</td>
-                    <td>45</td>
-                    <td>2011-08-12</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Angus Grady</td>
-                    <td>HR</td>
-                    <td>34</td>
-                    <td>2012-06-11</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Raheem Lehner</td>
-                    <td>Dynamic Division Officer</td>
-                    <td>47</td>
-                    <td>2011-04-19</td>
-                  </tr>
+
+                <tr th:each="customer : ${customers}">
+                  <td th:text="${customer.getCustomerID()}"></td>
+                  <td th:text="${customer.getFirstName()}"></td>
+                  <td th:text="${customer.getLastName()}"></td>
+                  <td th:text="${customer.getDateOfBirth()}"></td>
+                  <td th:text="${customer.getLicenceNumber()}"></td>
+                  <td th:text="${customer.getLicenceType()}"></td>
+                  <td th:text="${customer.getPhoneNumber()}"></td>
+                </tr>
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->

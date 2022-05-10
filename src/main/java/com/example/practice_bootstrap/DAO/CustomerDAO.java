@@ -17,7 +17,7 @@ public class CustomerDAO {
     JdbcTemplate jdbcTemplate;
     //
     public List<Customer> getCustomers() {
-        String sql = "SELECT * FROM nordic_motorhome.customers";
+        String sql = "SELECT * FROM nordic_motorhome.customers;";
         RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
         return jdbcTemplate.query(sql, rowMapper);
     }
