@@ -9,12 +9,13 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+//REpository
 @Repository
 public class CustomerDAO {
+    //Autowired
     @Autowired
     JdbcTemplate jdbcTemplate;
-
+    //
     public List<Customer> getCustomers() {
         String sql = "SELECT * FROM nordic_motorhome.customers";
         RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);

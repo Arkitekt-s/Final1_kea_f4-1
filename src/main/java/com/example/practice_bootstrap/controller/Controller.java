@@ -20,13 +20,21 @@ public class Controller {
     public String table1() {
         return "Cars";
     }
-    @GetMapping("/customers")
-    public String table2() {
-        return "customers ";
-    }
     @GetMapping("/register")
     public String register() {
         return "pages-register";
+    }
+    @GetMapping("/customers")
+    public String customers() {
+        return "customers ";
+    }
+    @GetMapping("/vehicles")
+    public String vehicles() {
+        return "vehicles";
+    }
+    @GetMapping("/bookings")
+    public String bookings() {
+        return "bookings";
     }
 
 }
