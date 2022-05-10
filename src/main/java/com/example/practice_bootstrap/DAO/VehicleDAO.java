@@ -19,4 +19,5 @@ public class VehicleDAO {
         RowMapper<Vehicle> rowMapper = new BeanPropertyRowMapper<>(Vehicle.class);
         return jdbcTemplate.query(sql, rowMapper);
     }
+
 }

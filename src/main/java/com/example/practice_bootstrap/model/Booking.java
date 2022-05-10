@@ -10,9 +10,9 @@ import lombok.Data;
 public class Booking {
     //@Id
     // attributes
-    private int bookingID;
+    private int bookingId;
     private String licensePlate;
-    private int customerID;
+    private int customerId;
     private LocalDate startDate;
     private LocalDate endDate;
 

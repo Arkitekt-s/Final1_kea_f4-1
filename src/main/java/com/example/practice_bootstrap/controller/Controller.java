@@ -1,5 +1,6 @@
 package com.example.practice_bootstrap.controller;
 
+import com.example.practice_bootstrap.DAO.BookingDAO;
 import com.example.practice_bootstrap.DAO.CustomerDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -10,6 +11,8 @@ public class Controller {
     //autowire to the repository
     @Autowired
     CustomerDAO customerDAO;
+    @Autowired
+    BookingDAO bookingDAO;
 
     @GetMapping("/")
     public String index(Model model) {
@@ -29,7 +32,8 @@ public class Controller {
     }
 
     @GetMapping("/bookings")
-    public String showBookings() {
+    public String showBookings(Model model) {
+        model.addAttribute("bookingsList", bookingDAO.getBookings());
         return "bookings";
     }
 

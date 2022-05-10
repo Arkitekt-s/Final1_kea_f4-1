@@ -15,8 +15,9 @@ public class BookingDAO {
     JdbcTemplate jdbcTemplate;
 
     public List<Booking> getBookings() {
-        String sql = "SELECT * FROM nordic_motorhome.bookings";
+        String sql = "SELECT * FROM nordic_motorhome.bookings;";
         RowMapper<Booking> rowMapper = new BeanPropertyRowMapper<>(Booking.class);
         return jdbcTemplate.query(sql, rowMapper);
     }
+
 }

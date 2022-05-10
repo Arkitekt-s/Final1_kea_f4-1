@@ -21,5 +21,6 @@ public class CustomerDAO {
         RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
         return jdbcTemplate.query(sql, rowMapper);
     }
+    //SHOW GET CUSTOMER BY ID
 
 }
