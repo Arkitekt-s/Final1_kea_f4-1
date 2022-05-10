@@ -22,16 +22,16 @@ public class Controller {
     //creat new page for the table
 
     @GetMapping("/customers")
-    public String customers(Model model) {
-        model.addAttribute("customers", customerDAO.getCustomers());
+    public String showCustomers(Model model) {
+        model.addAttribute("customersList", customerDAO.getCustomers());
         return "customers";
     }
     @GetMapping("/vehicles")
-    public String vehicles() {
+    public String showVehicles() {
         return "vehicles";
     }
     @GetMapping("/bookings")
-    public String bookings() {
+    public String showBookings() {
         return "bookings";
     }
 

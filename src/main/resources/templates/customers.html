@@ -369,7 +369,7 @@
                 </thead>
                 <tbody>
 
-                <tr th:each="customer : ${customers}">
+                <tr th:each="customer : ${customersList}">
                   <td th:text="${customer.getCustomerID()}"></td>
                   <td th:text="${customer.getFirstName()}"></td>
                   <td th:text="${customer.getLastName()}"></td>
