@@ -14,7 +14,7 @@ public class Customer {
     private String firstName;
     private String lastName;
     private int phoneNumber;
-    private String licenseNr;
+    private String licenseNumber;
     private String cLicense;
     private LocalDate dateOfBirth;
 

@@ -130,7 +130,7 @@
 
                             <tr th:each="booking : ${bookingsList}">
                                 <td th:text="${booking.getBookingId()}"></td>
-                                <td th:text="${booking.getLicensePlate()}"></td>
+                                <td th:text="${booking.getRegistrationPlate()}"></td>
                                 <td th:text="${booking.getCustomerId()}"></td>
                                 <td th:text="${booking.getStartDate()}"></td>
                                 <td th:text="${booking.getEndDate()}"></td>

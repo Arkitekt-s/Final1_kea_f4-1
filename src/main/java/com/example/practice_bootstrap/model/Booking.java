@@ -11,7 +11,7 @@ public class Booking {
     //@Id
     // attributes
     private int bookingId;
-    private String licensePlate;
+    private String registrationPlate;
     private int customerId;
     private LocalDate startDate;
     private LocalDate endDate;
