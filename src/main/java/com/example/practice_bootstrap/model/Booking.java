@@ -1,13 +1,14 @@
 package com.example.practice_bootstrap.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+//import javax.persistence.Entity;
+//import javax.persistence.Id;
 import java.time.LocalDate;
+import lombok.Data;
 
-//@lombok.Data
-@Entity
+//@Entity
+@Data
 public class Booking {
-    @Id
+    //@Id
     // attributes
     private int bookingID;
     private String licensePlate;
@@ -15,6 +16,7 @@ public class Booking {
     private LocalDate startDate;
     private LocalDate endDate;
 
+    /*
     // constructor
     public Booking() {
 
@@ -71,4 +73,5 @@ public class Booking {
                 ", endDate=" + endDate +
                 '}';
     }
+    */
 }
