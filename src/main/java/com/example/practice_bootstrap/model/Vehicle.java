@@ -1,13 +1,13 @@
 package com.example.practice_bootstrap.model;
 
+import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.time.LocalDate;
 
-//@lombok.Data
-@Entity
+//@Entity
+@Data
 public class Vehicle {
-    @Id
+    //@Id
     // attributes
     private String licensePlate;
     private int type;
@@ -17,6 +17,7 @@ public class Vehicle {
     private String licenceType;
     private double totalKM;
 
+    /*
     // constructor
     public Vehicle() {
 
@@ -89,4 +90,5 @@ public class Vehicle {
                 ", totalKM=" + totalKM +
                 '}';
     }
+    */
 }

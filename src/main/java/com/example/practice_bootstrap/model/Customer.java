@@ -3,8 +3,8 @@ package com.example.practice_bootstrap.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDate;
+import lombok.Data;
 
- import lombok.Data;
 //@Entity
 @Data
 public class Customer {
