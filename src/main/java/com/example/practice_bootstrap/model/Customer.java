@@ -10,12 +10,12 @@ import lombok.Data;
 public class Customer {
     //@Id
     // attributes
-    private int customerID;
+    private int customerId;
     private String firstName;
     private String lastName;
     private int phoneNumber;
-    private String licenceNumber;
-    private String licenceType;
+    private String licenseNr;
+    private String cLicense;
     private LocalDate dateOfBirth;
 
     // constructor

@@ -370,12 +370,12 @@
                 <tbody>
 
                 <tr th:each="customer : ${customersList}">
-                  <td th:text="${customer.getCustomerID()}"></td>
+                  <td th:text="${customer.getCustomerId()}"></td>
                   <td th:text="${customer.getFirstName()}"></td>
                   <td th:text="${customer.getLastName()}"></td>
                   <td th:text="${customer.getDateOfBirth()}"></td>
-                  <td th:text="${customer.getLicenceNumber()}"></td>
-                  <td th:text="${customer.getLicenceType()}"></td>
+                  <td th:text="${customer.getLicenseNr()}"></td>
+                  <td th:text="${customer.getCLicense()}"></td>
                   <td th:text="${customer.getPhoneNumber()}"></td>
                 </tr>
                 </tbody>
