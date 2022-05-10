@@ -18,11 +18,11 @@ public class Controller {
 
     @GetMapping("/cars")
     public String table1() {
-        return "tables-data";
+        return "Cars";
     }
     @GetMapping("/customers")
     public String table2() {
-        return "tables-general";
+        return "customers ";
     }
     @GetMapping("/register")
     public String register() {
