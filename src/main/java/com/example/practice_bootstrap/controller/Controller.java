@@ -21,18 +21,10 @@ public class Controller {
     }
     //creat new page for the table
 
-    @GetMapping("/cars")
-    public String table1() {
-        return "Cars";
-    }
-    @GetMapping("/register")
-    public String register() {
-        return "pages-register";
-    }
     @GetMapping("/customers")
     public String customers(Model model) {
         model.addAttribute("customers", customerDAO.getCustomers());
-        return "customers ";
+        return "customers";
     }
     @GetMapping("/vehicles")
     public String vehicles() {
