@@ -9,13 +9,12 @@ import javax.persistence.Id;
 public class Vehicle {
     //@Id
     // attributes
-    private String licensePlate;
-    private int type;
+    private String registrationPlate;
     private int capacity;
     private String brand;
     private String model;
-    private String licenceType;
-    private double totalKM;
+    private String cLicenseRequirement;
+    private double totalKm;
 
     /*
     // constructor
